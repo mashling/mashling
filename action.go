@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	MashlingActionRef = "github.com/TIBCOSoftware/mashling/pkg/flogo/action"
+	MashlingActionRef = "github.com/pointlander/mashling"
 )
 
 var (
