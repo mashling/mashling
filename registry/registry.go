@@ -14,7 +14,7 @@ type Factory func(name string, settings map[string]interface{}) (Service, error)
 
 var (
 	mutex    sync.RWMutex
-	registry map[string]Factory
+	registry = make(map[string]Factory, 32)
 )
 
 func Register(t string, factory Factory) {
