@@ -8,18 +8,19 @@ import (
 	//wsproxy "github.com/TIBCOSoftware/mashling/internal/pkg/model/v2/action/service/wsproxy"
 	"github.com/dop251/goja"
 	"github.com/pointlander/mashling/internal/pkg/model/v2/types"
+	"github.com/pointlander/mashling/registry"
 )
 
-// Service encapsulates everything necessary to execute a step against a target.
-type Service interface {
-	Execute() (err error)
-	UpdateRequest(values map[string]interface{}) (err error)
-}
-
 // Initialize sets up the service based off of the service definition.
-func Initialize(serviceDef types.Service) (service Service, err error) {
-	switch sType := serviceDef.Type; sType {
-	/*case "http":
+func Initialize(serviceDef types.Service) (service registry.Service, err error) {
+	factory := registry.Lookup(serviceDef.Type)
+	if factory == nil {
+		return nil, errors.New("unknown service type")
+	}
+	return factory(serviceDef.Name, serviceDef.Settings)
+
+	/*switch sType := serviceDef.Type; sType {
+	case "http":
 		return InitializeHTTP(serviceDef.Settings)
 	case "js":
 		return InitializeJS(serviceDef.Settings)
@@ -40,10 +41,10 @@ func Initialize(serviceDef types.Service) (service Service, err error) {
 	case "ws":
 		return wsproxy.InitializeWSProxy(serviceDef.Name, serviceDef.Settings)
 	case "ratelimiter":
-		return InitializeRateLimiter(serviceDef.Name, serviceDef.Settings)*/
+		return InitializeRateLimiter(serviceDef.Name, serviceDef.Settings)
 	default:
 		return nil, errors.New("unknown service type")
-	}
+	}*/
 }
 
 // VM represents a VM object.
