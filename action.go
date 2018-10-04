@@ -8,13 +8,13 @@ import (
 	"github.com/TIBCOSoftware/flogo-lib/app/resource"
 	"github.com/TIBCOSoftware/flogo-lib/core/action"
 	"github.com/TIBCOSoftware/flogo-lib/core/data"
-	"github.com/pointlander/mashling/internal/pkg/model/v2/action/core"
-	"github.com/pointlander/mashling/internal/pkg/model/v2/action/pattern"
-	"github.com/pointlander/mashling/internal/pkg/model/v2/types"
+	"github.com/mashling/mashling/internal/pkg/model/v2/action/core"
+	"github.com/mashling/mashling/internal/pkg/model/v2/action/pattern"
+	"github.com/mashling/mashling/internal/pkg/model/v2/types"
 )
 
 const (
-	MashlingActionRef = "github.com/pointlander/mashling"
+	MashlingActionRef = "github.com/mashling/mashling"
 )
 
 var (

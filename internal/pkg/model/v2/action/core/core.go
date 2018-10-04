@@ -9,9 +9,9 @@ import (
 	"strings"
 
 	"github.com/TIBCOSoftware/flogo-lib/logger"
-	mservice "github.com/pointlander/mashling/internal/pkg/model/v2/action/service"
-	"github.com/pointlander/mashling/internal/pkg/model/v2/types"
-	"github.com/pointlander/mashling/pkg/strings"
+	mservice "github.com/mashling/mashling/internal/pkg/model/v2/action/service"
+	"github.com/mashling/mashling/internal/pkg/model/v2/types"
+	"github.com/mashling/mashling/pkg/strings"
 )
 
 var log = logger.GetLogger("action-mashling")

@@ -74,7 +74,7 @@
   ],
   "actions": [
     {
-      "ref": "github.com/pointlander/mashling",
+      "ref": "github.com/mashling/mashling",
       "settings": null,
       "data": {
         "mashlingURI": "mashling:Pets"

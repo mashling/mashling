@@ -7,8 +7,8 @@ import (
 	//"github.com/TIBCOSoftware/mashling/internal/pkg/model/v2/action/service/grpc"
 	//wsproxy "github.com/TIBCOSoftware/mashling/internal/pkg/model/v2/action/service/wsproxy"
 	"github.com/dop251/goja"
-	"github.com/pointlander/mashling/internal/pkg/model/v2/types"
-	"github.com/pointlander/mashling/registry"
+	"github.com/mashling/mashling/internal/pkg/model/v2/types"
+	"github.com/mashling/mashling/registry"
 )
 
 // Initialize sets up the service based off of the service definition.

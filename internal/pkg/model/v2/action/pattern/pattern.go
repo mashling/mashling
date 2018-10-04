@@ -5,7 +5,7 @@ package pattern
 import (
 	"encoding/json"
 
-	"github.com/pointlander/mashling/internal/pkg/model/v2/types"
+	"github.com/mashling/mashling/internal/pkg/model/v2/types"
 )
 
 type PatternDefinition struct {
