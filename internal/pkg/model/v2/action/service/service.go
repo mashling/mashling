@@ -17,7 +17,7 @@ func Initialize(serviceDef types.Service) (service registry.Service, err error) 
 	if factory == nil {
 		return nil, errors.New("unknown service type")
 	}
-	return factory(serviceDef.Name, serviceDef.Settings)
+	return factory.Make(serviceDef.Name, serviceDef.Settings)
 
 	/*switch sType := serviceDef.Type; sType {
 	case "http":
